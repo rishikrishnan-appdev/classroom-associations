@@ -31,7 +31,13 @@
     <td>
       <%= course.title %>
     </td>
-
+    
+    <td>
+      <a href="/departments/<%= course.department_id %>">
+        <%= Department.find_by({:id => course.department_id}).name %>
+      </a>
+    </td>
+    
     <td>
       <a href="/courses/<%= course.id %>">
         Show details
